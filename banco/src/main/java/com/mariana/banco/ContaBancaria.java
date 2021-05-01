@@ -2,9 +2,14 @@ package com.mariana.banco;
 
 public class ContaBancaria {
     
-    private double saldo = 0;
+    private double saldo = 50;
 
-    public void sacar( double v){
+    public double sacar( double v){
+
+        setSaldo(saldo() - v);
+ 
+        return saldo();
+
         
     }
     
