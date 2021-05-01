@@ -21,7 +21,7 @@ public class ContaBancaria {
 
         
     }
-    public double deposito(double v) {
+    public double depositar(double v) {
         
         setSaldo(saldo() + v);
 
