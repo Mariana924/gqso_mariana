@@ -18,7 +18,7 @@ public class ContaBancaria {
         return this.saldo;
     }
 
-    private void setSaldo(double v) {
+    public void setSaldo(double v) {
         this.saldo = v;
     }
 }
