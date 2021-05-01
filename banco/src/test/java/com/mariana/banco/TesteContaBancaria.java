@@ -21,6 +21,6 @@ public class TesteContaBancaria {
     @Test
     public void testeSacar() throws SaldoInsuficiente {
     assertEquals(contaBancaria.saldo() - 50, contaBancaria.sacar(300));
-    assertThrows(ContaBancaria.SaldoInsuficiente.class, () -> ContaBancaria.sacar(300));
+    assertThrows(ContaBancaria.SaldoInsuficiente.class, () -> contaBancaria.sacar(300));
 
 }
