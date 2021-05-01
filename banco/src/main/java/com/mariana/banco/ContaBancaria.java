@@ -21,6 +21,14 @@ public class ContaBancaria {
 
         
     }
+    public double deposito(double v) {
+        
+        setSaldo(saldo() + v);
+
+
+        return saldo();
+    }
+
     
 
     public double saldo() {
