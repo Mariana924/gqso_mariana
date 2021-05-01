@@ -1,6 +1,10 @@
 package com.mariana.banco;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import com.mariana.banco.ContaBancaria.SaldoInsuficiente;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +19,8 @@ public class TesteContaBancaria {
        
 
     @Test
-    public void testeSacar() {
-    assertEquals(contaBancaria.saldo() - 50, contaBancaria.sacar(50));
+    public void testeSacar() throws SaldoInsuficiente {
+    assertEquals(contaBancaria.saldo() - 50, contaBancaria.sacar(300));
+    assertThrows(ContaBancaria.SaldoInsuficiente.class, () -> ContaBancaria.sacar(300));)
 
 }
